@@ -41,7 +41,7 @@ class LoginPanel extends JPanel {
         String username = usernameField.getText();
         String password = new String(passwordField.getPassword());
 
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/user_db", "root", "Harshu@955")) {
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/user_db", "root", "your_password")) {
             String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);
