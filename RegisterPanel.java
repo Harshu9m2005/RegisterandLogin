@@ -77,7 +77,7 @@ class RegisterPanel extends JPanel {
             return;
         }
 
-        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/user_db", "root", "Harshu@955")) {
+        try (Connection conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/user_db", "root", "your_password")) {
             String sql = "INSERT INTO users (username, password, book_name, book_id, issue_date, return_date) VALUES (?, ?, ?, ?, ?, ?)";
             PreparedStatement pstmt = conn.prepareStatement(sql);
             pstmt.setString(1, username);
