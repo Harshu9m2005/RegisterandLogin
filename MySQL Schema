@@ -1,0 +1,11 @@
+CREATE DATABASE user_db;
+use user_db;
+CREATE TABLE users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  username VARCHAR(50) NOT NULL UNIQUE,
+  password VARCHAR(50) NOT NULL,
+  book_name VARCHAR(100),
+  book_id VARCHAR(50),
+  issue_date DATE,
+  return_date DATE
+);
